@@ -3,7 +3,7 @@ namespace M184\Dispatcher;
 class Path{
 
   private $pathParts;
-  private $pagesArray = array("default");
+  private $pagesArray = array("default", "login", "home");
   private $versionsArray = array("v1","v2","v3");
   private $apiControllerArray = array();
 
