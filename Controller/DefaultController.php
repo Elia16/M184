@@ -8,7 +8,7 @@ class DefaultController
   $db;
   function __construct()
   {
-    $this->db = new \mysql();
+    $this->db = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
       if($this->valid_token() === true){
         header("Location: /home");
         exit();
