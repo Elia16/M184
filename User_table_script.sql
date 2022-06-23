@@ -7,5 +7,6 @@ USE usersDb;
             username VARCHAR(255) NOT NULL,
             password VARCHAR(255) NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            last_login TIMESTAMP);
+            last_login TIMESTAMP,
+            login_token nvarchar(255) NOT NULL);
             
