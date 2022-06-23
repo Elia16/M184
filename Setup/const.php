@@ -8,9 +8,9 @@ if(defined("VIEW_PATH") !== TRUE)     define("VIEW_PATH", __DIR__. "/../View/");
 
 //Database
 if(defined("DB_HOST") !== TRUE)     define("DB_HOST", "localhost");
-if(defined("DB_USERNAME") !== TRUE)     define("DB_USERNAME", "");
-if(defined("DB_PASSWORD") !== TRUE)     define("DB_PASSWORD", "");
-if(defined("DB_DATABASE") !== TRUE)     define("DB_DATABASE", "");
+if(defined("DB_USERNAME") !== TRUE)     define("DB_USERNAME", "usersAdmin");
+if(defined("DB_PASSWORD") !== TRUE)     define("DB_PASSWORD", "sml12345");
+if(defined("DB_DATABASE") !== TRUE)     define("DB_DATABASE", "usersDB");
 
 
  ?>
