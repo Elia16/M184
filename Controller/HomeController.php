@@ -8,7 +8,7 @@ class HomeController
 
   function __construct()
   {
-    // code...
+    require '../View/logined.php';
   }
 }
 

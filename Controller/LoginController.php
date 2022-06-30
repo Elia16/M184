@@ -5,15 +5,17 @@ namespace M184\Controller;
  */
 class LoginController
 {
-  $db;
-  $login_state = false;
+  private $login_state = false;
+  private $UserController;
 
 
   function __construct()
   {
-    $this->db = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+    $this->UserController = new UserController();
      if(isset($_POST['username']) && isset($_POST['password'])){
-
+       if($this->UserController->login($_POST['username'], $_POST['password'])){
+         require '../View/logined.php';
+       }
     }else{
     require_once '../View/login.php';
     }

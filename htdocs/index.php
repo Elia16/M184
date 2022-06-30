@@ -11,12 +11,13 @@
  //set Error Reporting
  error_reporting(-1);
  ini_set('display_errors', 'On');
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
   // Start session
   if(!isset($_SESSION))session_start();
 
   //set Constants
-  require_once __DIR__ .'/Setup/const.php';
+  require_once __DIR__ .'/../Setup/const.php';
 
   // load files
 
@@ -49,44 +50,12 @@
   // Load Controlers
   load_dir(CONTROLLER_PATH);
 
+  // Load Models
+  load_dir(MODEL_PATH);
+
   // Dispach
   use M184\Dispatcher\Dispatcher;
   Dispatcher::dispatch();
 
 
  ?>
-
-<html lang="en">
-<head>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="login-box">
-        <h2>Login</h2>
-        <form>
-          <div class="user-box">
-            <input type="text" name="" required="">
-            <label>Username</label>
-          </div>
-          <div class="user-box">
-            <input type="password" name="" required="">
-            <label>Password</label>
-          </div>
-          <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Register
-          </a>
-          <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Login
-          </a>
-        </form>
-      </div>
-</body>
-</html>

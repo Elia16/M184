@@ -17,7 +17,12 @@ class Dispatcher
            }
 
          switch ($path->getPage()) {
-
+           case 'login':
+             $controllerName = 'LoginController';
+             break;
+           case 'home':
+             $controllerName = 'HomeController';
+             break;
            default:
              $controllerName = 'DefaultController';
              break;

@@ -7,15 +7,15 @@ USE usersDb;
     FLUSH PRIVILEGES;
 
         CREATE TABLE users(
-            id VARCHAR(255) auto_increment NOT NULL,
+            id INT(255) auto_increment NOT NULL,
             username VARCHAR(255) NOT NULL,
             password VARCHAR(255) NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            last_login TIMESTAMP);
-            
-		CREATE TABLE tokens( 
+            last_login TIMESTAMP,
+						token nvarchar(255) NOT NULL);
+
+		CREATE TABLE tokens(
 			id nvarchar(255) auto_increment NOT NULL primary Key,
             token nvarchar(255) NOT NULL,
             uid nvarchar(255) NOT NULL,
             FOREIGN KEY (uid) references users(id));
-            
