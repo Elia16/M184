@@ -15,6 +15,8 @@ class LoginController
      if(isset($_POST['username']) && isset($_POST['password'])){
        if($this->UserController->login($_POST['username'], $_POST['password'])){
          require '../View/logined.php';
+       }else {
+         require_once '../View/login.php';
        }
     }else{
     require_once '../View/login.php';
